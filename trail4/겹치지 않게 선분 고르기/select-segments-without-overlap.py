@@ -16,8 +16,6 @@ def select_line(start,count):
                 best=count+1
             select_line(i+1,count+1)
             line.pop()
-        else:
-            select_line(i+1,count)
     return
 # Please write your code here.
 
