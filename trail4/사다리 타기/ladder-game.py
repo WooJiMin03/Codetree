@@ -24,9 +24,12 @@ def edge_choice(start,count):
             t=False
             break
     #확인
+    if(count > least):
+        return
     if(t):
         if(least>count):
             least=count
+            return
     #선택
     for i in range(start,len(edges)):
         a,b = edges[i]
