@@ -24,8 +24,6 @@ def edge_choice(start,count):
             t=False
             break
     #확인
-    if(count > least):
-        return
     if(t):
         if(least>count):
             least=count
