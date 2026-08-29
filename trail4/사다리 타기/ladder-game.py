@@ -18,26 +18,17 @@ for i in range(n):
 def edge_choice(start,count):
     global least
     global arr
-    if count >= least: return
-    t =True
-    for i in range(n):
-        if(result_arr[i]!=arr[i]):
-            t=False
-            break
     #확인
-    if(t):
-        if(least>count):
-            least=count
-            return
+    if count >= least: return
+    if arr == result_arr:
+        least = count
+        return
     #선택
     for i in range(start,len(edges)):
         a,b = edges[i]
-        tmp = arr[a-1]
-        arr[a-1] = arr[a]
-        arr[a]=tmp
+        arr[a-1], arr[a] = arr[a], arr[a-1]
         edge_choice(i+1,count+1)
-        arr[a] = arr[a-1]
-        arr[a-1]=tmp
+        arr[a-1], arr[a] = arr[a], arr[a-1]
 
 edge_choice(0,0)
 print(least)
