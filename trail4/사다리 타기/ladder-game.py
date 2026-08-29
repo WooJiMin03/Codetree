@@ -9,7 +9,7 @@ for a,b in edges:
     result_arr[a-1] = result_arr[a]
     result_arr[a]=tmp
 
-least = n
+least = m
 choice = []
 arr = [0]*n
 for i in range(n):
