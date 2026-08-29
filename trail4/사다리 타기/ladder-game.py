@@ -18,6 +18,7 @@ for i in range(n):
 def edge_choice(start,count):
     global least
     global arr
+    if count >= least: return
     t =True
     for i in range(n):
         if(result_arr[i]!=arr[i]):
