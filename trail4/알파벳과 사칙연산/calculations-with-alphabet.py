@@ -19,6 +19,7 @@ def select_num(count):
             #최댓값 인지 계산 
         if(total > best):
             best = total
+        return    
 
     for i in range(count,6):
         current_char=arr[count]
