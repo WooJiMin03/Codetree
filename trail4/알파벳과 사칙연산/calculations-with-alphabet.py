@@ -21,11 +21,10 @@ def select_num(count):
             best = total
         return    
 
-    for i in range(count,6):
-        current_char=arr[count]
-        for j in range(4):
-            dictionary[current_char]=j+1
-            select_num(i+1)
+    current_char=arr[count]
+    for j in range(1,5):
+        dictionary[current_char]=j
+        select_num(count+1)
 
 select_num(0)
 print(best)
