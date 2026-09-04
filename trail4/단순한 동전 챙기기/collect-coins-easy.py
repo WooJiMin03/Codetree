@@ -17,7 +17,7 @@ coin_list.sort()
 pick = []
 def choose(start_index):
     global least
-    if(len(pick) >= 3):
+    if(len(pick) == 3):
         dis = 0
         dis+=distance(dictionary['S'],dictionary[pick[0]]) #시작부터 첫번쨰 코인
         for c in range(len(pick)-1):
