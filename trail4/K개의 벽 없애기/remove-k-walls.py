@@ -9,7 +9,6 @@ c1 -= 1
 r2 -= 1
 c2 -= 1
 
-queue=deque()
 directions = [[1,0],[0,1],[-1,0],[0,-1]]#x,y
 least=float('inf')
 rock_list=[]
@@ -24,6 +23,7 @@ def choose_rock(start,count):
     global choose_list
     global least
     if(count==k):
+        queue=deque()   
         visited=[[False]*n for _ in range(n)]
         queue.append((c1,r1,0))
         visited[r1][c1]=True
@@ -36,7 +36,7 @@ def choose_rock(start,count):
             if(x==c2 and y==r2):
                 if(least > step):
                     least=step
-                    return
+                    break
             for ax,ay in directions:
                 nx,ny=ax+x,ay+y
                 if(0<=nx<n and 0<=ny<n and not visited[ny][nx] and grid[ny][nx] == 0):
